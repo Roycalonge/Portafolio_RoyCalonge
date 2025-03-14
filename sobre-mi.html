@@ -3,20 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Mí - Roy Calonge</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Si usas un archivo CSS externo -->
+    <title>Sobre Mí</title>
+    <link rel="stylesheet" href="assets/css/estilos.css"> <!-- Enlace a estilos externos -->
 </head>
 <body>
-    <nav>
-        <a href="index.html">Inicio</a>
-        <a href="sobre-mi.html">Sobre Mí</a>
-        <a href="mis-proyectos.html">Mis Proyectos</a>
-        <a href="contactame.html">Contáctame</a>
-    </nav>
 
-    <section>
-        <h1>Sobre Mí</h1>
-        <p>Soy técnico en sistemas con experiencia en soporte IT, desarrollo web y análisis de datos. Apasionado por la tecnología y la optimización de procesos digitales.</p>
-    </section>
+    <!-- Contenedor del encabezado -->
+    <div id="header-container"></div>
+
+    <div class="container">
+        <img src="https://i.postimg.cc/8cJR6rTb/sin-fondo-modified-2.png" alt="Foto de perfil" class="profile-img">
+        <div class="info">
+            <h1>Royber Calonge López</h1>
+            <h2>Técnico en sistemas - Freelancer</h2>
+            <p><strong>Experiencia:</strong> Asistente virtual, data entry, gestión de datos, soporte técnico y automatización de tareas.</p>
+            <p><strong>Habilidades:</strong> Tecnologías, manejo de software especializado, administración de bases de datos.</p>
+            <p>Busco mejorar mis conocimientos y ofrecer un servicio de calidad a mis clientes.</p>
+            <a href="https://wa.me/573188718692" class="whatsapp-btn">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"> Contáctame por WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Cargar el encabezado dinámicamente
+        fetch("header.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("header-container").innerHTML = data)
+            .catch(error => console.error("Error al cargar el encabezado: ", error));
+    </script>
+
 </body>
 </html>
