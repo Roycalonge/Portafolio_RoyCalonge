@@ -1,120 +1,103 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portafolio de Roy Calonge</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio - Roy Calonge</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a2e;
+            color: #fff;
+        }
+        /* Menú de navegación */
+        .navbar {
+            background-color: #0f3460;
+            padding: 15px;
+            text-align: center;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            display: inline-block;
+            font-weight: bold;
+        }
+        .navbar a:hover {
+            background-color: #007bff;
+            border-radius: 5px;
+        }
+        /* Contenedor del título */
+        .title-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .main-title {
+            font-size: 48px;
+            font-weight: bold;
+            text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
+            animation: fadeIn 2s ease-in-out;
+        }
+        .divider {
+            width: 80%;
+            height: 6px;
+            background: linear-gradient(90deg, #007bff, #00d4ff);
+            margin: 20px auto;
+            border-radius: 5px;
+            animation: lineExpand 2s ease-in-out infinite alternate;
+        }
+        .subtitle {
+            font-size: 28px;
+            font-weight: bold;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+            animation: fadeIn 3s ease-in-out;
+        }
+        .description {
+            font-size: 18px;
+            margin-top: 10px;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 4s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes lineExpand {
+            from { width: 60%; }
+            to { width: 90%; }
+        }
+        /* Cuerpo */
+        .content {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
-  <!-- Encabezado -->
-  <header>
-    <nav class="navbar">
-      <ul class="nav-list">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="sobre-mi.html">Sobre mí</a></li>
-        <li><a href="proyectos.html">Proyectos</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- Sección de Inicio -->
-  <section id="inicio" class="title-container">
-    <h1 class="main-title">Soluciones tecnológicas para tu empresa o emprendimiento.</h1>
-    <div class="divider"></div>
-    <h2 class="subtitle">Roy Calonge</h2>
-  </section>
-
-  <!-- Sección Contáctame -->
-  <section id="contactame" class="contact-section">
-    <p>¿Interesado en colaborar o necesitas soporte técnico? ¡No dudes en contactarme!</p>
-    <div class="contact-info">
-      <a href="mailto:roycalonge@hotmail.com" class="contact-link">✉️ roycalonge@hotmail.com</a>
-      <a href="https://www.linkedin.com/in/tuperfil" class="contact-link">🔗 LinkedIn</a>
-      <a href="https://github.com/tuusuario" class="contact-link">🐱 GitHub</a>
+    <div class="navbar">
+        <a href="#inicio">Inicio</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#contacto">Contacto</a>
     </div>
-  </section>
-</body>
-</html>
-
-<!-- Página Sobre Mí -->
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sobre Mí</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <header>
-    <nav class="navbar">
-      <ul class="nav-list">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="sobre-mi.html">Sobre mí</a></li>
-        <li><a href="proyectos.html">Proyectos</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
-  <section>
-    <h1>Sobre Mí</h1>
-    <p>Hola, soy Roy Calonge, un apasionado por la tecnología y el desarrollo web.</p>
-  </section>
-</body>
-</html>
-
-<!-- Página Proyectos -->
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Proyectos</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <header>
-    <nav class="navbar">
-      <ul class="nav-list">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="sobre-mi.html">Sobre mí</a></li>
-        <li><a href="proyectos.html">Proyectos</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
-  <section>
-    <h1>Mis Proyectos</h1>
-    <p>Aquí encontrarás algunos de los proyectos en los que he trabajado.</p>
-  </section>
-</body>
-</html>
-
-<!-- Página Contacto -->
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contacto</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <header>
-    <nav class="navbar">
-      <ul class="nav-list">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="sobre-mi.html">Sobre mí</a></li>
-        <li><a href="proyectos.html">Proyectos</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
-  <section>
-    <h1>Contacto</h1>
-    <p>Puedes contactarme a través del correo <a href="mailto:roycalonge@hotmail.com">roycalonge@hotmail.com</a></p>
-  </section>
+    <div class="title-container">
+        <h1 class="main-title">Soluciones tecnológicas para tu empresa o emprendimiento.</h1>
+        <div class="divider"></div>
+        <h2 class="subtitle">Roy Calonge</h2>
+        <p class="description">Optimización y Soporte IT para Empresas y Freelancers</p>
+    </div>
+    <div class="content">
+        <p>Técnico en sistemas con experiencia en soporte IT, desarrollo web y análisis de datos.<br>
+        Apasionado por la tecnología y la optimización de procesos digitales.</p>
+    </div>
 </body>
 </html>

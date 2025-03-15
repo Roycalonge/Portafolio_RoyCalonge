@@ -1,138 +1,87 @@
-/* Estilos generales */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-  color: #333;
-}
+<style>
+  /* Contenedor del título */
+  .title-container {
+    text-align: center;
+    margin-top: 50px;
+    font-family: Arial, sans-serif;
+    position: relative;
+    overflow: hidden;
+  }
 
-h1, h2, h3 {
-  color: #1e3c72;
-}
-
-a {
-  text-decoration: none;
-  color: #007bff;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Menú de Navegación */
-.navbar {
-  background: #1e3c72;
-  padding: 10px 20px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-.nav-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.nav-list li {
-  display: inline;
-}
-
-.nav-list a {
-  color: #fff;
-  font-size: 18px;
-  padding: 10px 15px;
-  border-radius: 5px;
-  transition: background 0.3s ease;
-}
-
-.nav-list a:hover {
-  background: #007bff;
-}
-
-/* Sección de Inicio */
-.title-container {
-  text-align: center;
-  padding: 100px 20px 50px;
-  background: linear-gradient(135deg, #1e3c72, #2a5298);
-  color: #fff;
-  margin-top: 60px; /* Margen superior para evitar que el menú lo cubra */
-}
-
-.main-title {
-  font-size: 48px;
-  font-weight: bold;
-  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
-  animation: fadeIn 2s ease-in-out;
-}
-
-.divider {
-  width: 80%;
-  height: 6px;
-  background: linear-gradient(90deg, #007bff, #00d4ff);
-  margin: 20px auto;
-  border-radius: 5px;
-  animation: lineExpand 2s ease-in-out infinite alternate;
-}
-
-.subtitle {
-  font-size: 28px;
-  font-weight: bold;
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
-  animation: fadeIn 3s ease-in-out;
-}
-
-.description {
-  font-size: 18px;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-  margin-top: 10px;
-  animation: fadeIn 4s ease-in-out;
-}
-
-.cta-button {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
-  font-size: 18px;
-  color: #fff;
-  background: #007bff;
-  border-radius: 5px;
-  transition: background 0.3s ease;
-}
-
-.cta-button:hover {
-  background: #0056b3;
-}
-
-/* Animaciones */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes lineExpand {
-  from { width: 60%; }
-  to { width: 90%; }
-}
-
-/* Responsividad */
-@media (max-width: 768px) {
+  /* Título principal */
   .main-title {
-    font-size: 36px;
+    font-size: 48px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
+    animation: glitch 1.5s infinite alternate, fadeIn 2s ease-in-out;
+    position: relative;
+    display: inline-block;
   }
+
+  /* Efecto de glitch */
+  @keyframes glitch {
+    0% { text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8); }
+    25% { text-shadow: -4px -4px 8px rgba(0, 0, 255, 0.8); }
+    50% { text-shadow: 4px -4px 8px rgba(255, 0, 0, 0.8); }
+    75% { text-shadow: -4px 4px 8px rgba(0, 255, 0, 0.8); }
+    100% { text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8); }
+  }
+
+  /* Línea intermedia animada */
+  .divider {
+    width: 80%;
+    height: 6px;
+    background: linear-gradient(90deg, #007bff, #00d4ff);
+    margin: 20px auto;
+    border-radius: 5px;
+    animation: lineExpand 2s ease-in-out infinite alternate;
+  }
+
+  /* Subtítulo */
   .subtitle {
-    font-size: 24px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #f2f2f2;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    animation: fadeIn 3s ease-in-out;
   }
+
+  /* Descripción */
   .description {
-    font-size: 16px;
+    font-size: 18px;
+    color: #ddd;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    margin-top: 10px;
+    animation: fadeIn 4s ease-in-out;
   }
-  .nav-list {
-    flex-direction: column;
-    align-items: center;
+
+  /* Animaciones */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
   }
-}
+
+  @keyframes lineExpand {
+    from { width: 60%; }
+    to { width: 90%; }
+  }
+
+  /* Efecto de luz al pasar el mouse */
+  .title-container:hover .main-title {
+    color: #00d4ff;
+    transition: color 0.5s ease-in-out;
+  }
+</style>
+
+<div class="title-container">
+  <h1 class="main-title">Soluciones tecnológicas para tu empresa o emprendimiento.</h1>
+  <div class="divider"></div>
+  <h2 class="subtitle">Roy Calonge</h2>
+  <p class="description">Optimización y Soporte IT para Empresas y Freelancers</p>
+</div>
+
+<p style="text-align: center; font-size: 20px; color: white; margin-top: 20px;">
+  Técnico en sistemas con experiencia en soporte IT, desarrollo web y análisis de datos.<br>
+  Apasionado por la tecnología y la optimización de procesos digitales.
+</p>
