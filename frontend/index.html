@@ -41,6 +41,9 @@
                     <p>¿Necesitas ayuda con tu infraestructura tecnológica? ¡Contáctame!</p>
                     <a href="#contacto" class="btn-contacto">Contactar ahora</a>
                 </div>
+                <!-- Agregar estos elementos -->
+                <p id="mensaje">Cargando mensaje del backend...</p>
+                <p id="error" style="color: red;"></p>
             </div>
         </section>
 
@@ -142,14 +145,6 @@
         </section>
     </main>
 
-    <script>
-        function showSection(event, sectionId) {
-            event.preventDefault();
-            document.querySelectorAll('.section').forEach(section => {
-                section.classList.remove('active');
-            });
-            document.getElementById(sectionId).classList.add('active');
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
