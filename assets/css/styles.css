@@ -1,0 +1,159 @@
+/* Estilos generales */
+body {
+    background-color: #000;
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Contenedor principal */
+.main-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Menú lateral */
+.sidebar {
+    position: fixed;
+    left: 50%; /* Centrado horizontal */
+    top: 50%; /* Centrado vertical */
+    transform: translate(-50%, -50%); /* Ajuste fino para centrar */
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar a {
+    color: #00d4ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sidebar a:hover {
+    color: #007bff;
+}
+
+/* Menú principal */
+header {
+    background-color: #000; /* Fondo negro */
+    padding: 10px 0; /* Espaciado interno */
+    width: 100%; /* Ocupa todo el ancho */
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none; /* Quita los puntos de la lista */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Usa Flexbox */
+    justify-content: center; /* Centra los elementos horizontalmente */
+}
+
+nav ul li {
+    margin: 0 15px; /* Espaciado entre elementos */
+    position: relative;
+}
+
+nav ul li a {
+    color: white; /* Color del texto */
+    text-decoration: none; /* Quita el subrayado */
+    font-size: 18px; /* Tamaño de la fuente */
+    font-weight: bold; /* Grosor de la fuente */
+    transition: color 0.3s ease; /* Transición suave del color */
+}
+
+nav ul li a:hover {
+    color: #00d4ff; /* Cambia el color al pasar el mouse */
+}
+
+/* Submenú */
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #000;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li {
+    margin: 5px 0;
+}
+
+nav ul li ul li a {
+    font-size: 16px;
+}
+
+/* Contenido principal */
+.title-container {
+    text-align: center;
+    width: 90%;
+    max-width: 800px;
+    margin-top: 80px; /* Ajuste para el header fijo */
+}
+
+/* Título principal */
+.main-title {
+    font-size: 48px;
+    font-weight: bold;
+    text-shadow: 4px 4px 8px rgba(255, 255, 255, 0.2);
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Línea decorativa */
+.divider {
+    width: 80%;
+    height: 6px;
+    background: linear-gradient(90deg, #007bff, #00d4ff);
+    margin: 20px auto;
+    border-radius: 5px;
+    animation: lineExpand 2s ease-in-out infinite alternate;
+}
+
+/* Subtítulo */
+.subtitle {
+    font-size: 28px;
+    font-weight: bold;
+    color: #f2f2f2;
+    text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.2);
+}
+
+/* Descripción */
+.description {
+    font-size: 18px;
+    color: #ddd;
+    text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.1);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes lineExpand {
+    from { width: 60%; }
+    to { width: 90%; }
+}

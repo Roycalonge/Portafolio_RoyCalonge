@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis proyectos - Roy Calonge</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        /* Estilos específicos para los recuadros de proyectos */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: transparent;
+        }
+
+        .contenedor {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px;
+            flex-wrap: wrap;
+        }
+
+        .cuadro {
+            border-radius: 12px;
+            overflow: hidden;
+            width: 350px;
+            text-align: center;
+            transition: transform 0.3s;
+            background: transparent;
+            border: 2px solid #ddd;
+            padding: 10px;
+        }
+
+        .cuadro:hover {
+            transform: scale(1.05);
+            border-color: #007BFF;
+        }
+
+        .cuadro img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .contenido {
+            padding: 15px;
+        }
+
+        .titulo {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #007BFF;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .titulo a {
+            text-decoration: none;
+            color: #000;
+            transition: color 0.3s;
+        }
+
+        .titulo a:hover {
+            color: #007BFF;
+        }
+
+        .descripcion {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .detalles {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out, opacity 0.3s ease-out;
+            opacity: 0;
+            text-align: left;
+            font-size: 14px;
+            color: #333;
+            padding: 0 15px;
+        }
+
+        .detalles.activo {
+            max-height: 300px;
+            opacity: 1;
+            padding: 10px 15px;
+        }
+
+        .toggle-btn {
+            border: none;
+            padding: 8px 12px;
+            cursor: pointer;
+            font-size: 14px;
+            background: none;
+            color: #007BFF;
+            text-decoration: underline;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+
+        .toggle-btn:hover {
+            color: #0056b3;
+        }
+
+        .toggle-btn i {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="about.html">Sobre mí</a></li>
+                <li>
+                    <a href="projects.html">Mis proyectos</a>
+                    <ul class="submenu">
+                        <li><a href="web-design.html">Diseño y Desarrollo Web</a></li>
+                        <li><a href="excel-solutions.html">Excel Solutions</a></li>
+                        <li><a href="soporte-tec.html">SoporteTec Ms</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contáctame</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="title-container">
+        <h1 class="main-title">Soluciones tecnológicas para tu empresa o emprendimiento.</h1>
+        <div class="divider"></div>
+        <h2 class="subtitle">Roy Calonge</h2>
+        <p class="description">Optimización y Soporte IT para Empresas y Freelancers</p>
+    </div>
+
+    <div class="contenedor">
+        <div class="cuadro">
+            <a href="soporte-tec.html">
+                <img src="assets/images/soporte-tec.jpg" alt="Soporte Técnico">
+            </a>
+            <div class="contenido">
+                <div class="titulo">
+                    <a href="soporte-tec.html">Soportec Ms</a>
+                </div>
+                <div class="descripcion">Soluciones de soporte técnico y mantenimiento.</div>
+                <button class="toggle-btn" onclick="toggleDetalles(this)">
+                    <i>➕</i> Ver más detalles
+                </button>
+                <div class="detalles">
+                    <p>📌 Soluciones de soporte técnico y mantenimiento para empresas y profesionales.</p>
+                    <p>✅ <strong>Funciones principales:</strong></p>
+                    <ul>
+                        <li>Soporte remoto y presencial para equipos y servidores.</li>
+                        <li>Mantenimiento preventivo y correctivo de hardware y software.</li>
+                        <li>Gestión y optimización de redes empresariales.</li>
+                        <li>Implementación de medidas de seguridad informática.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="cuadro">
+            <a href="web-design.html">
+                <img src="assets/images/web-design.jpg" alt="Diseño Web">
+            </a>
+            <div class="contenido">
+                <div class="titulo">
+                    <a href="web-design.html">Diseño y Desarrollo Web</a>
+                </div>
+                <div class="descripcion">Creación de sitios web personalizados y optimizados.</div>
+                <button class="toggle-btn" onclick="toggleDetalles(this)">
+                    <i>➕</i> Ver más detalles
+                </button>
+                <div class="detalles">
+                    <p>✅ <strong>Funciones principales:</strong></p>
+                    <ul>
+                        <li>Creación de sitios web personalizados según necesidades del cliente.</li>
+                        <li>Desarrollo de plataformas optimizadas para rendimiento y seguridad.</li>
+                        <li>Integración con bases de datos y herramientas empresariales.</li>
+                        <li>Diseño responsivo para una experiencia óptima en cualquier dispositivo.</li>
+                        <li>Optimización SEO y estrategias para mejorar la visibilidad online.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="cuadro">
+            <a href="excel-solutions.html">
+                <img src="assets/images/excel-solutions.jpg" alt="Excel Solutions">
+            </a>
+            <div class="contenido">
+                <div class="titulo">
+                    <a href="excel-solutions.html">Excel Solutions</a>
+                </div>
+                <div class="descripcion">Automatización y gestión de datos en Excel.</div>
+                <button class="toggle-btn" onclick="toggleDetalles(this)">
+                    <i>➕</i> Ver más detalles
+                </button>
+                <div class="detalles">
+                    <p>✅ <strong>Funciones principales:</strong></p>
+                    <ul>
+                        <li>Automatización de tareas repetitivas en Excel.</li>
+                        <li>Creación de macros y scripts personalizados.</li>
+                        <li>Análisis y visualización de datos avanzados.</li>
+                        <li>Integración con otras herramientas empresariales.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleDetalles(btn) {
+            const detalles = btn.nextElementSibling;
+            const icon = btn.querySelector("i");
+            detalles.classList.toggle("activo");
+
+            if (detalles.classList.contains("activo")) {
+                btn.innerHTML = '<i>➖</i> Ver menos detalles';
+            } else {
+                btn.innerHTML = '<i>➕</i> Ver más detalles';
+            }
+        }
+    </script>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Roy Calonge. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
