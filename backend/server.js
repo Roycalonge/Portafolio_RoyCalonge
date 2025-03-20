@@ -1,19 +1,42 @@
-// backend/server.js
 const express = require('express');
-const cors = require('cors');
 const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Habilitar CORS
-app.use(cors());
+// Servir archivos estáticos desde la raíz del proyecto
+app.use(express.static(path.join(__dirname, '../')));
 
-// Servir archivos estáticos del frontend
-app.use(express.static(path.join(__dirname, '../frontend')));
+// Servir archivos estáticos desde la carpeta "assets"
+app.use('/assets', express.static(path.join(__dirname, '../assets')));
 
-// Ruta de ejemplo para el backend
-app.get('/api/mensaje', (req, res) => {
-    res.json({ mensaje: 'Hola desde el backend!' });
+// Ruta principal
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '../index.html'));
+});
+
+// Rutas para otras páginas
+app.get('/about', (req, res) => {
+    res.sendFile(path.join(__dirname, '../about.html'));
+});
+
+app.get('/contact', (req, res) => {
+    res.sendFile(path.join(__dirname, '../contact.html'));
+});
+
+app.get('/excel-solutions', (req, res) => {
+    res.sendFile(path.join(__dirname, '../excel-solutions.html'));
+});
+
+app.get('/projects', (req, res) => {
+    res.sendFile(path.join(__dirname, '../projects.html'));
+});
+
+app.get('/soporte-tec', (req, res) => {
+    res.sendFile(path.join(__dirname, '../soporte-tec.html'));
+});
+
+app.get('/web-design', (req, res) => {
+    res.sendFile(path.join(__dirname, '../web-design.html'));
 });
 
 // Iniciar el servidor
