@@ -157,3 +157,6 @@ nav ul li ul li a {
     from { width: 60%; }
     to { width: 90%; }
 }
+header {
+    background-color: #000 !important;
+}
