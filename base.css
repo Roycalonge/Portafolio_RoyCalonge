@@ -1,0 +1,66 @@
+/* ============================================================
+   BASE — Variables, reset, tipografía
+   ============================================================ */
+
+:root {
+  --navy: #082b4c;
+  --navy2: #0b3b62;
+  --blue: #0a6caa;
+  --green: #76c82f;
+  --green-dark: #3f941e;
+  --ink: #132b42;
+  --muted: #647588;
+  --paper: #f5f8fa;
+  --line: #dce5ec;
+  --white: #ffffff;
+  --radius: 22px;
+  --shadow: 0 18px 45px rgba(8, 43, 76, .09);
+}
+
+* { box-sizing: border-box; }
+
+html { min-width: 320px; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'DM Sans', sans-serif;
+  line-height: 1.65;
+}
+
+h1, h2, h3, p { margin-top: 0; }
+
+h1, h2, h3, .brand-name {
+  font-family: Manrope, sans-serif;
+  letter-spacing: -.04em;
+}
+
+h2 {
+  font-size: clamp(2.15rem, 4.4vw, 3.6rem);
+  line-height: 1.12;
+  font-weight: 800;
+  margin-bottom: 22px;
+}
+
+h2 span, h1 span { color: var(--green); }
+
+a { color: inherit; text-decoration: none; }
+
+button, a { -webkit-tap-highlight-color: transparent; }
+
+a:focus-visible, button:focus-visible {
+  outline: 3px solid var(--green);
+  outline-offset: 4px;
+}
+
+img { display: block; max-width: 100%; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
