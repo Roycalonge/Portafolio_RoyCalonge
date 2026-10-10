@@ -4,100 +4,96 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#082b4c">
-  <meta name="description" content="Portafolio profesional de Royber Calonge López: apoyo contable y administrativo, sistemas, análisis de datos, automatización y logística.">
-  <title>Royber Calonge López | Portafolio profesional</title>
+  <meta name="description" content="Portafolio profesional de Royber Calonge López: apoyo contable y administrativo, sistemas, datos, automatización y logística.">
+  <title>Inicio | Royber Calonge López</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="#inicio" aria-label="Inicio Royber Calonge">
+    <a class="brand" href="index.html">
       <span class="brand-mark">RC<span>.</span></span>
       <span class="brand-name">ROYBER CALONGE <small>PORTAFOLIO PROFESIONAL</small></span>
     </a>
-    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
-    <nav class="nav" aria-label="Navegación principal">
-      <a href="#perfil">Perfil</a><a href="#areas">Áreas</a><a href="#experiencia">Experiencia</a><a href="#proyectos">Proyectos</a><a href="#formacion">Formación</a>
+    <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="site-nav">☰</button>
+    <nav class="nav" id="site-nav" aria-label="Navegación principal">
+      <a href="index.html" data-page="index">Inicio</a>
+      <a href="perfil.html" data-page="perfil">Perfil</a>
+      <a href="areas.html" data-page="areas">Áreas</a>
+      <a href="experiencia.html" data-page="experiencia">Experiencia</a>
+      <a href="proyectos.html" data-page="proyectos">Proyectos</a>
+      <a href="formacion.html" data-page="formacion">Formación</a>
+      <a href="contacto.html" data-page="contacto">Contacto</a>
       <a class="nav-contact" href="https://wa.me/573188718692" target="_blank" rel="noopener">Contactarme ↗</a>
     </nav>
   </header>
 
   <main>
-    <section class="hero" id="inicio">
+    <section class="hero">
       <div class="hero-grid">
         <div class="hero-copy">
           <div class="eyebrow"><span class="status-dot"></span> ABIERTO A NUEVAS OPORTUNIDADES</div>
           <h1>Mi próximo reto <span>profesional.</span></h1>
           <p class="hero-lead">Experiencia práctica, ganas de aprender y una mirada integral a los procesos <strong>contables, administrativos, tecnológicos y logísticos.</strong></p>
           <p class="hero-sub">Busco una oportunidad donde pueda aportar, seguir formándome y ayudar a que el trabajo sea más organizado, confiable y eficiente.</p>
-          <div class="hero-actions"><a class="button button-green" href="https://wa.me/573188718692?text=Hola%20Royber%2C%20vi%20tu%20portafolio%20profesional." target="_blank" rel="noopener">Hablemos por WhatsApp <span>↗</span></a><a class="text-link" href="#proyectos">Explorar proyectos ↓</a></div>
-          <div class="hero-meta"><span>⌖ Florencia, Caquetá</span><span>◷ Presencial · híbrido · remoto</span></div>
+          <div class="hero-actions">
+            <a class="button button-green" href="https://wa.me/573188718692?text=Hola%20Royber%2C%20vi%20tu%20portafolio%20profesional." target="_blank" rel="noopener">Hablemos por WhatsApp <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="perfil.html">Conocer mi perfil →</a>
+          </div>
+          <div class="hero-meta">
+            <span>⌖ Florencia, Caquetá</span>
+            <span>◷ Presencial · híbrido · remoto</span>
+          </div>
         </div>
         <div class="hero-visual">
-          <div class="portrait-frame"><img src="assets/royber-retrato.jpg" alt="Retrato profesional de Royber Calonge López"></div>
-          <div class="portrait-caption"><span class="caption-line"></span><div><strong>Royber Calonge López</strong><small>Auxiliar contable y administrativo</small></div></div>
+          <div class="portrait-frame"><img src="assets/royber-retrato.png" alt="Retrato profesional de Royber Calonge López"></div>
+          <div class="portrait-caption">
+            <span class="caption-line" aria-hidden="true"></span>
+            <div><strong>Royber Calonge López</strong><small>Auxiliar contable y administrativo</small></div>
+          </div>
           <div class="hero-watermark" aria-hidden="true"><img src="assets/hgc-marca-agua.png" alt=""></div>
-          <div class="floating-note"><span>+</span> Experiencia<br>Formación<br>Compromiso</div>
+          <div class="floating-note"><span aria-hidden="true">+</span> Experiencia<br>Formación<br>Compromiso</div>
         </div>
       </div>
-      <div class="hero-bottom"><span>01 / PERFIL PROFESIONAL</span><span class="scroll-cue">DESLIZA PARA CONOCER MÁS ↓</span></div>
-    </section>
-
-    <section class="section intro" id="perfil">
-      <div class="section-kicker">01 — SOBRE MÍ</div>
-      <div class="intro-grid"><h2>Conectar procesos.<br><span>Resolver con criterio.</span></h2><div><p class="large-copy">Soy Técnico en Sistemas, Bachiller Comercial y estudiante de Contaduría Pública. Mi recorrido reúne labores operativas, logísticas, administrativas y de apoyo contable.</p><p>Me adapto a diferentes entornos, aprendo haciendo y procuro trabajar con orden, respeto y atención al detalle. Me interesa aportar tanto en la operación diaria como en la mejora de procedimientos y el manejo de información.</p></div></div>
-      <div class="stats-row"><div><strong>10<span>+</span></strong><small>Años de experiencia acumulada en distintos entornos laborales</small></div><div><strong>04</strong><small>Frentes de aporte: administración, contabilidad, tecnología y logística</small></div><div><strong>∞</strong><small>Disposición para aprender y fortalecer mis competencias</small></div></div>
-    </section>
-
-    <section class="section areas-section" id="areas">
-      <div class="section-kicker">02 — DÓNDE PUEDO APORTAR</div><div class="section-heading"><h2>Capacidades para el<br><span>día a día del negocio.</span></h2><p>Una combinación de organización, soporte operativo y herramientas digitales para apoyar equipos y procesos.</p></div>
-      <div class="area-grid">
-        <article class="area-card"><div class="area-icon">▤</div><span class="card-number">01</span><h3>Apoyo contable</h3><p>Digitación y registro de información, facturación, recaudo, organización de soportes y apoyo en la preparación de reportes.</p><div class="tags"><span>Registros</span><span>Facturación</span><span>Soportes</span></div></article>
-        <article class="area-card"><div class="area-icon">▦</div><span class="card-number">02</span><h3>Gestión administrativa</h3><p>Gestión documental, actualización de bases de datos, control de información y seguimiento de tareas administrativas.</p><div class="tags"><span>Documentos</span><span>Datos</span><span>Control</span></div></article>
-        <article class="area-card"><div class="area-icon">⌘</div><span class="card-number">03</span><h3>Sistemas y soporte</h3><p>Apoyo a usuarios, equipos y sistemas, manejo de herramientas digitales y experiencia relacionada con monitoreo CCTV.</p><div class="tags"><span>Soporte</span><span>Equipos</span><span>CCTV</span></div></article>
-        <article class="area-card"><div class="area-icon">↗</div><span class="card-number">04</span><h3>Datos y automatización</h3><p>Organización de datos, hojas de cálculo, elaboración de reportes y exploración de automatizaciones para tareas repetitivas.</p><div class="tags"><span>Excel</span><span>Google Sheets</span><span>Python básico</span></div></article>
-        <article class="area-card"><div class="area-icon">▱</div><span class="card-number">05</span><h3>Logística y operaciones</h3><p>Experiencia en inventarios, recepción, despacho, almacenamiento, manejo de montacargas y coordinación de novedades operativas.</p><div class="tags"><span>Inventarios</span><span>Bodega</span><span>Despachos</span></div></article>
-        <article class="area-card area-card-highlight"><div class="area-icon">✳</div><span class="card-number">06</span><h3>Mejora de procesos</h3><p>Interés en identificar oportunidades para organizar mejor la información, reducir reprocesos y facilitar el seguimiento de actividades.</p><div class="tags"><span>Orden</span><span>Seguimiento</span><span>Mejora continua</span></div></article>
+      <div class="hero-bottom">
+        <span>PORTAFOLIO PROFESIONAL</span>
+        <span class="scroll-cue">NAVEGA POR EL MENÚ ↑</span>
       </div>
     </section>
 
-    <section class="section experience-section" id="experiencia">
-      <div class="section-kicker">03 — TRAYECTORIA</div><div class="section-heading"><h2>Experiencia construida<br><span>desde la práctica.</span></h2><p>He desempeñado funciones en diferentes áreas, desarrollando adaptabilidad, responsabilidad y disposición para aprender nuevas tareas.</p></div>
-      <div class="timeline">
-        <article class="timeline-item"><span class="timeline-dot"></span><div class="timeline-label">CONTABILIDAD Y ADMINISTRACIÓN</div><div class="timeline-content"><h3>Apoyo contable y administrativo independiente</h3><p>Apoyo en digitación y actualización de registros, organización de soportes, elaboración de reportes en hojas de cálculo y preparación de información para revisión contable.</p><small>Herramientas y entornos: Excel, EVOLERP, FACTOA y gestión documental.</small></div></article>
-        <article class="timeline-item"><span class="timeline-dot"></span><div class="timeline-label">SERVICIOS Y TECNOLOGÍA</div><div class="timeline-content"><h3>Auxiliar administrativo · Proyectovisión</h3><p>Experiencia en actividades administrativas vinculadas a la gestión de información y apoyo a la operación de una empresa de servicios de internet.</p></div></article>
-        <article class="timeline-item"><span class="timeline-dot"></span><div class="timeline-label">LOGÍSTICA Y ALMACENAMIENTO</div><div class="timeline-content"><h3>Operaciones de bodega y montacargas</h3><p>Experiencia en recepción, almacenamiento, control de inventarios y despacho, en entornos de operación y distribución, incluyendo empresas como Almagrario, Colgate-Palmolive y Nutresa.</p></div></article>
-        <article class="timeline-item"><span class="timeline-dot"></span><div class="timeline-label">OTRAS EXPERIENCIAS</div><div class="timeline-content"><h3>Operación, servicio y trabajo práctico</h3><p>Mi trayectoria también incluye labores operativas, apoyo como ayudante electricista y experiencia como barbero, fortaleciendo el trato con las personas, la disciplina y la adaptación a distintos ritmos de trabajo.</p></div></article>
+    <section class="section intro">
+      <div class="section-kicker">BIENVENIDO</div>
+      <div class="intro-grid">
+        <h2>Conectar procesos.<br><span>Resolver con criterio.</span></h2>
+        <div>
+          <p class="large-copy">Soy Técnico en Sistemas, Bachiller Comercial y estudiante de Contaduría Pública. Mi recorrido reúne labores operativas, logísticas, administrativas y de apoyo contable.</p>
+          <p>Explora las diferentes secciones del menú para conocer mi perfil, experiencia, proyectos y formación.</p>
+          <div class="hero-actions intro-actions">
+            <a class="button button-green" href="perfil.html">Ver mi perfil →</a>
+            <a class="text-link" href="proyectos.html">Explorar proyectos →</a>
+          </div>
+        </div>
       </div>
-      <p class="note">La trayectoria se presenta por áreas de experiencia; las fechas y los cargos específicos pueden ampliarse en la hoja de vida detallada.</p>
     </section>
-
-    <section class="section tools-section">
-      <div class="section-kicker">04 — HERRAMIENTAS</div><div class="section-heading"><h2>Herramientas que<br><span>acompañan mi trabajo.</span></h2><p>Experiencia y nivel de manejo según el uso práctico que he tenido; sigo fortaleciendo mis conocimientos.</p></div>
-      <div class="tool-list"><div class="tool"><span class="tool-symbol">X</span><div><strong>Microsoft Excel</strong><small>Registros, bases de datos y reportes</small></div><span class="tool-type">HOJAS DE CÁLCULO</span></div><div class="tool"><span class="tool-symbol">▦</span><div><strong>Google Sheets</strong><small>Organización y colaboración con datos</small></div><span class="tool-type">HOJAS DE CÁLCULO</span></div><div class="tool"><span class="tool-symbol">Py</span><div><strong>Python básico</strong><small>Exploración de datos y automatización inicial</small></div><span class="tool-type">PROGRAMACIÓN</span></div><div class="tool"><span class="tool-symbol">▣</span><div><strong>Microsoft Office</strong><small>Documentos, presentaciones y trabajo de oficina</small></div><span class="tool-type">PRODUCTIVIDAD</span></div><div class="tool"><span class="tool-symbol">F</span><div><strong>FACTOA · EVOLERP</strong><small>Experiencia de uso en procesos de apoyo contable</small></div><span class="tool-type">GESTIÓN</span></div><div class="tool"><span class="tool-symbol">W</span><div><strong>WispHub</strong><small>Contacto práctico con herramientas de gestión de servicios</small></div><span class="tool-type">PLATAFORMA</span></div></div>
-    </section>
-
-    <section class="section projects-section" id="proyectos">
-      <div class="section-kicker">05 — PROYECTOS</div><div class="section-heading"><h2>Aprender creando<br><span>soluciones prácticas.</span></h2><p>Proyectos personales y académicos que reúnen organización de información, automatización y procesos administrativos.</p></div>
-      <div class="project-grid">
-        <article class="project-card"><div class="project-top"><span class="project-category">EMPRENDIMIENTO · CONTABILIDAD</span><span class="project-index">P / 01</span></div><h3>HGC Asociados</h3><p>Concepto de marca y propuesta de servicios de gestión contable para emprendedores y pequeñas empresas, con enfoque en organización y acompañamiento administrativo.</p><div class="project-footer"><span>Identidad · Web · Procesos</span><span class="project-arrow">↗</span></div></article>
-        <article class="project-card"><div class="project-top"><span class="project-category">EXCEL · NÓMINA</span><span class="project-index">P / 02</span></div><h3>Modelo de nómina colombiana</h3><p>Diseño de una estructura de práctica para empleados, periodos, novedades, horas extra, recargos, incapacidades, vacaciones, deducciones y comprobantes.</p><div class="project-footer"><span>Parámetros · Registros · Reportes</span><span class="project-arrow">↗</span></div></article>
-        <article class="project-card"><div class="project-top"><span class="project-category">FINANZAS PERSONALES</span><span class="project-index">P / 03</span></div><h3>Rc_Bank</h3><p>Diseño de un sistema de control financiero personal con registro de movimientos, distribución de ingresos, metas, seguimiento de deudas y reglas operativas.</p><div class="project-footer"><span>Control · Presupuesto · Seguimiento</span><span class="project-arrow">↗</span></div></article>
-        <article class="project-card"><div class="project-top"><span class="project-category">DATOS · AUTOMATIZACIÓN</span><span class="project-index">P / 04</span></div><h3>Sistemas de apoyo administrativo</h3><p>Exploración de plantillas y aplicaciones para organizar presupuestos, información académica y tareas repetitivas, buscando claridad y consistencia en los registros.</p><div class="project-footer"><span>Hojas de cálculo · GAS · Reportes</span><span class="project-arrow">↗</span></div></article>
-      </div>
-      <p class="note">Los proyectos se describen como trabajos de diseño, práctica o desarrollo según su estado; no se presentan como productos comerciales terminados.</p>
-    </section>
-
-    <section class="section education-section" id="formacion">
-      <div class="section-kicker">06 — FORMACIÓN</div><div class="education-grid"><div><h2>Formación para<br><span>seguir avanzando.</span></h2><p>Mi objetivo es combinar la experiencia laboral con el aprendizaje continuo y fortalecer mis competencias profesionales.</p></div><div class="education-list"><article><span class="education-icon">01</span><div><h3>Técnico en Sistemas</h3><p>Formación técnica en sistemas y tecnología.</p></div><span class="education-state">COMPLETADO</span></article><article><span class="education-icon">02</span><div><h3>Contaduría Pública</h3><p>Estudiante universitario.</p></div><span class="education-state ongoing">EN CURSO</span></article><article><span class="education-icon">03</span><div><h3>Bachiller Comercial</h3><p>Formación media con orientación comercial.</p></div><span class="education-state">COMPLETADO</span></article><article><span class="education-icon">04</span><div><h3>Contabilidad y Finanzas</h3><p>Formación técnica iniciada, no finalizada.</p></div><span class="education-state partial">INCOMPLETA</span></article></div></div>
-    </section>
-
-    <section class="contact-section" id="contacto"><div class="contact-watermark" aria-hidden="true"><img src="assets/hgc-marca-agua.png" alt=""></div><div class="section-kicker">07 — CONVERSEMOS</div><h2>¿Tienes una oportunidad<br>que encaje con mi perfil?</h2><p>Estaré agradecido de conversar sobre cómo puedo aportar a tu equipo. También puedes compartir este portafolio con alguien que esté buscando un perfil como el mío.</p><div class="contact-actions"><a class="button button-green" href="https://wa.me/573188718692?text=Hola%20Royber%2C%20me%20gustar%C3%ADa%20conversar%20sobre%20una%20oportunidad%20laboral." target="_blank" rel="noopener">✆ &nbsp; WhatsApp: 318 871 8692 ↗</a><button class="button button-outline" id="copy-contact" type="button">Copiar número</button></div><div class="contact-foot"><span>Florencia, Caquetá, Colombia</span><span>Presencial · Híbrido · Remoto</span><span>#OpenToWork</span></div></section>
   </main>
-  <footer class="footer"><a class="brand" href="#inicio"><span class="brand-mark">RC<span>.</span></span><span class="brand-name">ROYBER CALONGE <small>EXPERIENCIA + FORMACIÓN + COMPROMISO</small></span></a><span>© <span id="year"></span> Royber Calonge López · Portafolio profesional</span><a href="#inicio">Volver arriba ↑</a></footer>
+
+  <footer class="footer">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">RC<span>.</span></span>
+      <span class="brand-name">ROYBER CALONGE <small>EXPERIENCIA + FORMACIÓN + COMPROMISO</small></span>
+    </a>
+    <span>© <span id="year"></span> Royber Calonge López · Portafolio profesional</span>
+    <a href="index.html">Volver al inicio ↑</a>
+  </footer>
   <div class="toast" role="status" aria-live="polite"></div>
-  <script src="script.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/copy.js"></script>
+  <script src="js/active.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
